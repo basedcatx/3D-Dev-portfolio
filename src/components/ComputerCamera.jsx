@@ -11,7 +11,7 @@ const ComputerCamera = ({children, index}) => {
     })
 
     return (
-        <group ref={groupRef} scale={3.5} position={[0, -0.7, 0]} rotation={[0, 0, 0]} >
+        <group ref={groupRef} scale={3} position={[0, -1, 0]} rotation={[0, 0, 0]} >
             {children}
         </group>
     )

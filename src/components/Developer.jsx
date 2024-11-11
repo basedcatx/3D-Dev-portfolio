@@ -6,7 +6,7 @@ import React, { useEffect, useRef } from 'react'
 import { useAnimations, useFBX, useGLTF } from '@react-three/drei'
 import { Bloom, EffectComposer, SSAO } from '@react-three/postprocessing'
 
-const Developer = ({animationName = 'idle', ...props}) => {
+const Developer = ({animationName = 'victory', ...props}) => {
   const { nodes, materials } = useGLTF('/models/developer.glb')
   const { animations: clapAnimation } = useFBX('/models/animations/clapping.fbx');
   const { animations: saluteAnimation } = useFBX('/models/animations/salute.fbx');

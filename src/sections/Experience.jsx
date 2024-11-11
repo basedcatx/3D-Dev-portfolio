@@ -21,7 +21,7 @@ const Experience = () => {
                             <directionalLight position={[10, 10, 10]} intensity={2} castShadow/>
                             <PerspectiveCamera makeDefault={true} position={[10, 0, 0]}/>
                             <Suspense fallback={<CanvasLoader />}>
-                                <Developer scale={4.5} position={[0, -4.2, 0]}/>
+                                <Developer scale={4.5} position={[0, -4.2, 0]} animationName={animationName}/>
                             </Suspense>
                             <OrbitControls enableZoom={false} maxPolarAngle={Math.PI/2} enableDamping/>
                         </Canvas>
