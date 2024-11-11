@@ -43,7 +43,6 @@ const Developer = ({animationName = 'victory', ...props}) => {
     <group {...props} dispose={null} ref={groupRef} rotation={[0, Math.PI / 1.9, 0]}>
         <EffectComposer enableNormalPass>
             <Bloom intensity={5} luminanceThreshold={0.1} luminanceSmoothing={5} />
-            <SSAO radius={1} intensity={1} />
         </EffectComposer>
 
       <primitive object={nodes.Hips} />

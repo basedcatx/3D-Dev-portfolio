@@ -6,6 +6,7 @@ import CanvasLoader from "../components/CanvasLoader";
 import DemoComputer from "../components/DemoComputer";
 import { easing } from "maath";
 import ComputerCamera from "../components/ComputerCamera";
+import Dialog from "../components/Dialog";
 
 const projectCount = myProjects.length;
 
@@ -25,7 +26,7 @@ const Project = () => {
     const currentProject = myProjects[selectedProjectIndex];
 
     return (
-       <section className="c-space my-10">
+       <section className="c-space my-10" id="stuff">
             <p className="head-text">My Work</p>
             <div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full">
 
@@ -70,8 +71,8 @@ const Project = () => {
 
                 <div className="border-black-300 bg-black-200 rounded-lg h-96 md:h-full">
                     <Canvas>
-                        <ambientLight intensity={Math.PI} />
-                        <directionalLight position={[10, 10, 10]} intensity={10}/>
+                        <ambientLight intensity={8} />
+                        <directionalLight position={[10, 10, 10]} intensity={20}/>
                         <Center>
                             <Suspense fallback={<CanvasLoader />}>
                                 <ComputerCamera index={selectedProjectIndex}>

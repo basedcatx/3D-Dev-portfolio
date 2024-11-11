@@ -155,7 +155,7 @@ export const navLinks = [
       subdesc:
         'At the core of NetBoltZ lies sophisticated techniques for effective network packet transmission. This innovative approach ensures, efficient flow, maximizing your available bandwidth. By streamlining data transmission, NetBoltZ significantly reduces lag and enhances overall performance, providing a truly transformative internet experience. ',
       href: 'https://netboltz.vercel.app',
-      texture: 'https://www.youtube.com/watch?v=rrwDr_AWrl0',
+      texture: '/textures/project/project2.mp4',
       logo: '/assets/project-logo1.png',
       logoStyle: {
         backgroundColor: '#692328',
@@ -187,7 +187,7 @@ export const navLinks = [
       subdesc:
         'Based Tunnel is a VPN Tunnelling application, which strives to bypass some firewall restrictions, as well as giving you total freedom and security while you are surfing the internet',
       href: 'https://t.me/senxvpn',
-      texture: '/textures/project/project_based.mp4',
+      texture: '/textures/project/project3.mp4',
       logo: '/assets/based.png',
       logoStyle: {
         backgroundColor: '#2A1816',
@@ -214,13 +214,13 @@ export const navLinks = [
       ],
     },
     {
-      title: 'Horizon - Online Banking Platform',
-      desc: 'Horizon is a comprehensive online banking platform that offers users a centralized finance management dashboard. It allows users to connect multiple bank accounts, monitor real-time transactions, and seamlessly transfer money to other users.',
+      title: '3D Portfolio - A Dev 3D Portfolio',
+      desc: 'My 3D Portfolio that showcases some of my interests, skills and projects over the few years xd',
       subdesc:
-        'Built with Next.js 14 Appwrite, Dwolla and Plaid, Horizon ensures a smooth and secure banking experience, tailored to meet the needs of modern consumers.',
-      href: 'https://www.youtube.com/watch?v=PuOVqP_cjkE',
+        'Built with React.Js Three.Js, which ensures a smooth and responsive experience, tailored to be of good standards with respect to material design concepts.',
+      href: '#home',
       texture: '/textures/project/project4.mp4',
-      logo: '/assets/project-logo4.png',
+      logo: '/assets/project-logo1.png',
       logoStyle: {
         backgroundColor: '#0E1F38',
         border: '0.2px solid #0E2D58',
@@ -240,24 +240,25 @@ export const navLinks = [
         },
         {
           id: 3,
-          name: 'TypeScript',
-          path: '/assets/typescript.png',
+          name: 'JS',
+          path: '/assets/techres/4.svg',
         },
         {
           id: 4,
-          name: 'Framer Motion',
-          path: '/assets/framer.png',
+          name: 'Three.js',
+          path: '/assets/techres/10.svg',
         },
       ],
     },
+
     {
-      title: 'Imaginify - AI Photo Manipulation App',
-      desc: 'Imaginify is a groundbreaking Software-as-a-Service application that empowers users to create stunning photo manipulations using AI technology. With features like AI-driven image editing, a payments system, and a credits-based model.',
+      title: 'Brigde - Mobile eWallet & Transfers',
+      desc: 'Bridge is a groundbreaking solution application that empowers users to trasnfer money internationally, fast and securely. With features like a payments system, which supports many countries at very low rates.',
       subdesc:
-        'Built with Next.js 14, Cloudinary AI, Clerk, and Stripe, Imaginify combines cutting-edge technology with a user-centric approach. It can be turned into a side income or even a full-fledged business.',
-      href: 'https://www.youtube.com/watch?v=Ahwoks_dawU',
+        'Built with Kotlin, XML Bridge combines cutting-edge technology with a user-centric approach. It can be turned into a side income or even a full-fledged business (ongoing project).',
+      href: 'false',
       texture: '/textures/project/project5.mp4',
-      logo: '/assets/project-logo5.png',
+      logo: '/assets/project-logo1.png',
       logoStyle: {
         backgroundColor: '#1C1A43',
         border: '0.2px solid #252262',
@@ -267,23 +268,18 @@ export const navLinks = [
       tags: [
         {
           id: 1,
-          name: 'React.js',
-          path: '/assets/react.svg',
+          name: 'Kotlin',
+          path: '/assets/techres/2.svg',
         },
         {
           id: 2,
-          name: 'TailwindCSS',
-          path: 'assets/tailwindcss.png',
+          name: 'Java',
+          path: 'assets/techres/1.svg',
         },
         {
           id: 3,
-          name: 'TypeScript',
-          path: '/assets/typescript.png',
-        },
-        {
-          id: 4,
-          name: 'Framer Motion',
-          path: '/assets/framer.png',
+          name: 'XML',
+          path: '/assets/android.svg',
         },
       ],
     },
@@ -329,3 +325,10 @@ export const navLinks = [
       animation: 'salute',
     },
   ];
+
+  export const SocialLinks = {
+    telegram : 'https://t.me/basedcatx',
+    github : 'https://github.com/fsenzol',
+    twitter : 'https://x.com/basedcatx',
+    instagram : 'https://instagram.com/basedcatx'
+  }

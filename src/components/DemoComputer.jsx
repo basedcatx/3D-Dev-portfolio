@@ -23,8 +23,7 @@ const DemoComputer = ({props, projectID}) => {
   return (
     <group {...props} dispose={null}>
         <EffectComposer enableNormalPass>
-            <Bloom intensity={1} luminanceThreshold={1} luminanceSmoothing={5} />
-            <SSAO radius={1} intensity={1} />
+            <Bloom intensity={1} luminanceThreshold={3} luminanceSmoothing={5} />
         </EffectComposer>
       <group position={[0, 0.13999999, 0.10365203]} scale={0.12960002}>
         <mesh

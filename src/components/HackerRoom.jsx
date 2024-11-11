@@ -4,13 +4,14 @@ Command: npx gltfjsx@6.5.0 hacker-room-new.glb -T
 Files: hacker-room-new.glb [34.62MB] > /Users/hsuwinlat/Desktop/jsm pj/threejscc-portfolio/public/models/hacker-room-new-transformed.glb [2.56MB] (93%)
 */
 
-import { useGLTF, useTexture } from '@react-three/drei';
+import { useGLTF, useTexture, useVideoTexture} from '@react-three/drei';
 import { Bloom, EffectComposer, SSAO } from '@react-three/postprocessing';
 
  const HackerRoom = (props) => {
   const { nodes, materials } = useGLTF('/models/hacker-room.glb');
 
   const monitortxt = useTexture('textures/desk/monitor.png');
+  const videoTexture = useVideoTexture('/textures/project/hacking.mp4')
 
 
   return (
@@ -18,12 +19,13 @@ import { Bloom, EffectComposer, SSAO } from '@react-three/postprocessing';
 
         <EffectComposer enableNormalPass>
             <Bloom intensity={5} luminanceThreshold={0.1} luminanceSmoothing={5} />
-            <SSAO radius={1} intensity={1} />
         </EffectComposer>
       <mesh geometry={nodes.screen_screens_0.geometry} material={materials.screens}>
         {/* <meshLambertMaterial map={screenTxt} /> */}
       </mesh>
-      <mesh geometry={nodes.screen_glass_glass_0.geometry} material={materials.glass} />
+      <mesh geometry={nodes.screen_glass_glass_0.geometry} material={materials.glass}>
+        <meshStandardMaterial map={videoTexture} lightMapIntensity={0.5} luminanceSmoothing={0.4} roughness={0.4} metalness={0.4}/>
+      </mesh>
       <mesh geometry={nodes.table_table_mat_0_1.geometry} material={materials.table_mat} />
       <mesh geometry={nodes.table_table_mat_0_2.geometry} material={materials.computer_mat}>
         <meshStandardMaterial map={monitortxt} />
