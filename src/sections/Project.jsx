@@ -10,8 +10,18 @@ import Dialog from "../components/Dialog";
 
 const projectCount = myProjects.length;
 
-const Project = () => {
+const Project = ({dialogRef}) => {
     const [selectedProjectIndex, setSelectedProjectIndex] = useState(0)
+    
+    const processUrl = (url) => {
+        if (url.toLowerCase() != "false") {
+            window.open(url, '_blank', 'noopener,noreferrer')
+        } else {
+            if (dialogRef?.current) {
+                dialogRef.current.showModal()
+            }
+        }
+    }
 
     const handleNavigation = (direction) => {
         setSelectedProjectIndex((prevIndex) => {
@@ -49,7 +59,7 @@ const Project = () => {
                                 <img src={value.path} alt={value.name} />
                             </div>))}
                         </div>
-                        <a className="flex items-center gap-2 z-10 cursor-pointer text-white-600" href={currentProject.href} target="_blank" rel="noopener noreferrer">
+                        <a className="flex items-center gap-2 z-10 cursor-pointer text-white-600" onClick={() => processUrl(currentProject.href)}>
                             <p>Check live site</p>
                             <img src="/assets/arrow-up.png" className="w-3 h-3" alt="arrow" />
                         </a>
