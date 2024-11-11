@@ -5,22 +5,28 @@ Files: hacker-room-new.glb [34.62MB] > /Users/hsuwinlat/Desktop/jsm pj/threejscc
 */
 
 import { useGLTF, useTexture } from '@react-three/drei';
+import { Bloom, EffectComposer, SSAO } from '@react-three/postprocessing';
 
  const HackerRoom = (props) => {
   const { nodes, materials } = useGLTF('/models/hacker-room.glb');
 
   const monitortxt = useTexture('textures/desk/monitor.png');
-  const screenTxt = useTexture('textures/desk/based.png');
+
 
   return (
     <group {...props} dispose={null}>
+
+        <EffectComposer enableNormalPass>
+            <Bloom intensity={5} luminanceThreshold={0.1} luminanceSmoothing={5} />
+            <SSAO radius={1} intensity={1} />
+        </EffectComposer>
       <mesh geometry={nodes.screen_screens_0.geometry} material={materials.screens}>
         {/* <meshLambertMaterial map={screenTxt} /> */}
       </mesh>
       <mesh geometry={nodes.screen_glass_glass_0.geometry} material={materials.glass} />
       <mesh geometry={nodes.table_table_mat_0_1.geometry} material={materials.table_mat} />
       <mesh geometry={nodes.table_table_mat_0_2.geometry} material={materials.computer_mat}>
-        <meshMatcapMaterial map={monitortxt} />
+        <meshStandardMaterial map={monitortxt} />
       </mesh>
       <mesh geometry={nodes.table_table_mat_0_3.geometry} material={materials.server_mat} />
       <mesh geometry={nodes.table_table_mat_0_4.geometry} material={materials.vhsPlayer_mat} />

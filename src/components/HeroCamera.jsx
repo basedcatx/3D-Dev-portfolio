@@ -18,7 +18,7 @@ const HeroCamera = ({children, isMobile}) => {
 
 
     return (
-        <group ref={groupRef} scale={1.1}>
+        <group ref={groupRef} >
             {children}
         </group>
     )

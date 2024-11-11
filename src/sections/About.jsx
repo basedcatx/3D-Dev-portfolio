@@ -2,6 +2,7 @@ import Globe from "react-globe.gl"
 import Button from "../components/Button"
 import CanvasLoader from "../components/CanvasLoader"
 import { Suspense, useState } from "react"
+import { TechStack } from "../constants"
 
 const About = () => {
     const [hasCopied, setHasCopied] = useState(false)
@@ -13,9 +14,11 @@ const About = () => {
         }, 2000)
     }
 
+    
+
     return (
-      <section className="c-space my-10">
-        <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-fit">
+      <section className="c-space my-10" id="about">
+        <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-fit w-full">
 
             <div className="col-span-1 xl:row-span-3">
                 <div className="grid-container">
@@ -35,7 +38,24 @@ const About = () => {
                 </div>
             </div>
 
-            <div className="col-span-1 xl:row-span-4">
+
+            {
+                TechStack.map((item, id) => (
+                    <div className="xl:col-span-1 xl:row-span-3 flex justify-center items-center" key={id}>
+                        <div className="grid-container">
+                            <img src={`/assets/techres/${id}.svg`} id={id} alt="0" className="w-full h-[100px] object-contain"/>
+                            {/* <div className="w-full h-fit flex justify-center items-center">
+                           
+                            </div> */}
+                            <p className="grid-headtext">{item.title}</p>
+                            <p className="grid-subtext text-pretty">{item.desc}</p>
+                        </div>
+                    </div>
+                ))
+            }
+
+
+<div className="col-span-1 xl:row-span-4">
                 <div className="grid-container">
                     <Suspense fallback={<CanvasLoader />}>
                         <div className="rounded-3xl w-full flex justify-center items-center">
@@ -73,11 +93,11 @@ const About = () => {
                 </div>
             </div>
 
+        
             <div className="xl:col-span-1 xl:row-span-2">
                 <div className="grid-container">
-                    <img src="/assets/grid4.png" alt="grid-4" className="w-full md:h-[126px] sm:h-[276px] h-fit object-cover sm:object-top"/>
+                    <img src="/assets/grid4.png" alt="grid-4" className="w-full md:h-[150px] sm:h-[276px] h-fit object-contain sm:object-top"/>
                     <div className="space-y-2">
-                        <p className="grid-subtext text-center">Contact me</p>
                         <div className="copy-container" onClick={handleCopy}>
                             <img src={hasCopied ? "assets/tick.svg" : "assets/copy.svg"} />
                             <p className="lg:text-2xl md:text-xl font-medium text-gray_gradient text-white">faithsenz12@gmail.com</p>
@@ -85,8 +105,12 @@ const About = () => {
                     </div>
                 </div>
             </div>
+
+
+
         </div>
-        
+
+       
       </section>
     )
 }
