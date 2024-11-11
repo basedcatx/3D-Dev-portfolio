@@ -58,12 +58,19 @@ const sizes = calculateSizes(isSmall, isMobile, isTablet)
     return (
        <section className="min-h-screen w-full h-full flex-col relative" id="home" >
             <div className="w-full flex-col sm:mt-36 h-full mt-20 gap-3 p-0 m-0">
-                <p ref={textNameRef} className="sm:text-4xl p-0 m-0 text-xl font-medium bg-gradient-to-br from-red-500 to-purple-500 text-transparent bg-clip-text text-white text-center font-generalsans" style={{clipPath : 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)' }}>
-                    Hi, I am Captain BaseDCaTx <span className="waving-hand">XD</span>
-                </p>
-                <p className="hero_tag text-gray_gradient">
-                    Just making stuff for fun!
-                </p>
+                <p ref={textNameRef} 
+                    className="sm:text-4xl
+                        p-0 m-0 text-xl 
+                        font-medium
+                        bg-gradient-to-br
+                         from-red-500 
+                         to-purple-500 
+                        text-transparent 
+                        bg-clip-text
+                         text-white 
+                         text-center font-generalsans">Hi, I am Captain BaseDCaTx <span className="waving-hand">XD</span> </p>
+                <p className="hero_tag text-gray_gradient">Just making stuff for fun!</p>
+                
                 <div className="w-full h-screen inset-0">
                     <Canvas className="w-full h-screen mb-20">
                         <Suspense fallback={<CanvasLoader />}>
