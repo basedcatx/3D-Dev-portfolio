@@ -7,7 +7,7 @@ import { TechStack } from "../constants"
 const About = () => {
     const [hasCopied, setHasCopied] = useState(false)
     const handleCopy = () => {
-        navigator.clipboard.writeText("faithsenz12@gmail.com")
+        navigator.clipboard.writeText("basedcatx@gmail.com")
         setHasCopied(hasCopied => true)
         setTimeout(() => {
             setHasCopied(false)
