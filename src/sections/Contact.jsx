@@ -45,7 +45,7 @@ const Contact = () => {
     }
 
     return (
-        <section className="c-space my-15" id="contact">
+        <section className="c-space my-15 mb-10" id="contact">
             <div className="relative min-h-screen flex items-center justify-center flex-col">
                 <div className="contact-container grid-container">
                     <h3 className="head-text">Let's talk</h3>
